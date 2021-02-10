@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
     var div = document.getElementById("mainDiv");
-    
+
     for (var i = 1; i <= 100; i++) {
         var friendsArray = ["Ali",
             "Fatima",
             "Liam",
             "Muhammad",
             "Carter"];
-    
+
         var locationArray = ["Conservatory",
             "Games Room",
             "Wine Cellar",
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "Hearth Room",
             "Parlor Room",
             "Master Bedroom"];
-    
+
         var weaponArray = ["Cow Pies",
             "Fart Gun",
             "Mop Bucket",
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             "Wine Bottle",
             "Dumbbell",
             "Cut Wire from the Doorbell"];
-        
+
         var createH3Elements = document.createElement("h3");
         var h3Text = document.createTextNode(`Accusation ${i}`);
 
@@ -50,14 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function alertMsg(i) {
         function newAlert() {
-            console.log(`Accusation ${[i]}: I accuse ${friendsArray[i]}, with the ${weaponArray[i]} in the ${locationArray[i]}!`);
+            alert(`Accusation ${[i]}: I accuse ${friendsArray[i % 5]}, with the ${weaponArray[i % 20]} in the ${locationArray[i % 10]}!`);
         }
 
         return newAlert;
     }
 })
-
-
-// lexical scoping
-// - the variable defined outside the ScopedCredential, upper scope, can be accessed inside.
-// - You don't have to pass them inside
